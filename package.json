@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "grunt-http": "^1.6.0",
+	"grunt-contrib-clean": "*",
+	"grunt-ftp-push": "*",
+	"grunt-shell": "*",
+	"grunt-contrib-compress": "*",
+	"grunt-http    ": "*",
+    "gulp": "^3.8.8",
+    "laravel-elixir": "*"
+  }
+}

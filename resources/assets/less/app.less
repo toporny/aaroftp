@@ -1,0 +1,93 @@
+@import "../bower/bootstrap/less/bootstrap";
+
+@btn-font-weight: 300;
+
+body, label, .checkbox label {
+	font-weight: 300;
+}
+
+.sort_active {color:red}
+
+.round_question_mark {
+  color:#337ab7;
+}
+
+.btn-info {
+    color: #ffffff;
+    background-color: #8399A2;
+    border-color: #46b8da;
+}
+
+a.blacklink {
+  color: inherit;
+}
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.s {color:red}
+
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+
+.break-all { word-break:break-all; }
+.break-none { word-break:normal; }
+
+.form-group {margin-bottom:6px;}
+
+.pagination {display:inline;}
+
+.datepicker {
+  td:hover {background:#dddddd}
+  margin:2px;
+  padding:2px;
+  .today {
+    background-color:rgb(255,255,100);
+  }
+}
+
+input, select, textarea {
+  &.parsley-success {
+    color: #468847;
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+  }
+}
+
+input, select, textarea {
+  &.parsley-error {
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border: 1px solid #EED3D7;
+  }
+}
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  color: red;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  &.filled{
+    opacity: 1;
+  }
+}
+

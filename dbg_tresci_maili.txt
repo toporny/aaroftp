@@ -1,0 +1,148 @@
+po kupnie 
+mail po kupnie
+
+[FIRSTNAME] Please Ensure You've Filled In Your Install Request Form!
+
+
+Thank you [FIRSTNAME] for your recent purchase of [PRODUCTNAME].
+
+We'd like to start working on your project right away.
+
+To ensure that our staff receive your install request please make sure you've filled in the form below...
+
+http://aaronftp.byonecar.com/?uicode=[UICODE]
+
+
+Thanks,
+Aaron.
+SuperSalesMachine.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 1 - Your Details
+First Name: *
+Last Name: *
+Email Address: *
+So we can contact you directly after your setup is complete!
+
+
+
+Step 2 - Personalizing Your Site
+!Support Email/URL: *
+NOTE: This will be displayed on the footer and download pages of your sites e.g. 'For help and support please contact support[at]emailaddress.com'
+!PayPal Email: *
+!ClickBank ID: *
+!JVZoo ID: *
+
+NOTE: JVZoo allows split payment to your PayPal account on a variety of products! To get your JVZoo referral ID, go to https://www.jvzoo.com/auth/register then log into account > My Account > My Account > 'Your JVZoo Referral URL:' in the table under personal information.
+
+
+
+Step 3 - Your Server Details
+Server IP or URL: *
+FTP Username: *
+FTP Password: *
+FTP DIR: *
+URL to your website:
+NOTE: Please ensure your domain is pointed to your webhost so that any files we upload are shown on your domain name straight away. Your nameservers should be pointed correctly and your domain should be created as an add-on if purchasing a new domain name. You can use an existing unused domain or register a new one and we will install your product like so... http://www.domain.com/ProductName
+
+For security reasons we recommend that you create an FTP account within your cPanel that allows our team access to only one domain folder within your server. This way we can keep all your installations in once place and not interrupt other parts of your business!
+
+Double check that you can log in with the supplied details - this will save interruption time!
+
+
+
+
+
+
+
+
+SUBJECT: Congratulations [FIRST NAME] Your Installation Of [PRODUCT] Is Complete!
+Thank you again for investing in our install service.
+A fully working version of [PRODUCT] has just been installed on your server.
+Please log into your admin area to get access to your links:
+[DOMAIN]/admin
+user: admin
+pass: ssmachine
+
+Thanks,
+SuperSalesMachine.com Team!
+
+
+Things to think & discuss in saturday:
+1. Domain for form 
+2. 
+
+
+
+
+
+
+
+
+
+
+Step 1 - Your Details
+First Name: *
+Last Name: *
+Email Address: *
+So we can contact you directly after your setup is complete!
+
+
+
+Step 2 - Personalizing Your Site
+!Support Email/URL: *
+NOTE: This will be displayed on the footer and download pages of your sites e.g. 'For help and support please contact support[at]emailaddress.com'
+!PayPal Email: *
+!ClickBank ID: *
+!JVZoo ID: *
+
+NOTE: JVZoo allows split payment to your PayPal account on a variety of products! To get your JVZoo referral ID, go to https://www.jvzoo.com/auth/register then log into account > My Account > My Account > 'Your JVZoo Referral URL:' in the table under personal information.
+
+
+
+Step 3 - Your Server Details
+Server IP or URL: *
+FTP Username: *
+FTP Password: *
+FTP DIR: *
+URL to your website:
+NOTE: Please ensure your domain is pointed to your webhost so that any files we upload are shown on your domain name straight away. Your nameservers should be pointed correctly and your domain should be created as an add-on if purchasing a new domain name. You can use an existing unused domain or register a new one and we will install your product like so... http://www.domain.com/ProductName
+
+For security reasons we recommend that you create an FTP account within your cPanel that allows our team access to only one domain folder within your server. This way we can keep all your installations in once place and not interrupt other parts of your business!
+
+Double check that you can log in with the supplied details - this will save interruption time!
+
+
+
+
+
+
+
+
+SUBJECT: Congratulations [FIRST NAME] Your Installation Of [PRODUCT] Is Complete!
+Thank you again for investing in our install service.
+A fully working version of [PRODUCT] has just been installed on your server.
+Please log into your admin area to get access to your links:
+[DOMAIN]/admin
+user: admin
+pass: ssmachine
+
+Thanks,
+SuperSalesMachine.com Team!
+
+
+Things to think & discuss in saturday:
+1. Domain for form 
+2. 

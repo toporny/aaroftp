@@ -1,0 +1,10 @@
+{
+    "server_dev":{
+        "username":"aaron_dev@setupmyproduct.com",
+        "password":"aaron_dev#99"
+    },
+    "server_prod":{
+        "username":"aaron_prod@setupmyproduct.com",
+        "password":"aaron_prod#99"
+    }
+}

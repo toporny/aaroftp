@@ -1,0 +1,10 @@
+{
+  "name": "Aaroftp",
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git",
+    "bootstrap": "https://github.com/twbs/bootstrap.git",
+    "bootbox": "https://github.com/makeusabrew/bootbox.git",
+    "datepicker": "https://github.com/eternicode/bootstrap-datepicker.git",
+    "parsley": "https://github.com/guillaumepotier/Parsley.js.git"
+  }
+}

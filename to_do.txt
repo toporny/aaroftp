@@ -1,0 +1,149 @@
+<pre>
+
+1. ALTER TABLE `transactions` DROP COLUMN `paypal_api_id`; // from everywhere
+2. ALTER TABLE `transactions` ADD COLUMN `aweber_username` CHAR(64) NULL DEFAULT NULL AFTER `jvzoo_id`, ADD COLUMN `aweber_password` CHAR(64) NULL DEFAULT NULL AFTER `aweber_username`;
+
+
+
+
+pytania do aarona:
+- dlaczego index.php jeszcze nie zapodal do serwera ? (trzeba jeszcze zbadac date ZIPa zeby wiedziec wersje)
+- czemu niektore rysunki GIFy w adminach ludzi nie pokazują się? (już wiem bo był wyczyszczony bucket)
+- dlaczego korzysta z dwóch bucketów w adminie ? (ostatnio jedno wiadro się wyczyściło i szlag trafił wszystko)
+- przejrzałem jego zipy i sprzedaje też jakieś za darmo pliczki graficzki i inne gówna. co to ma być ?
+- spytać się czy klienci będą zainteresowani hostingiem na swoje domeny? (może warto sprzedawać im space też?)
+- jak wyciągnąć $ z clickbank
+- dlaczego konto paypal mu zablokowali? dlaczego nie chce odblokowac tylko zakładać nowe ? 
+- jak zmienic paypal najvzsoo zeby teraz z przemyslaw.rzeznik@gmail.com korzystalo? 
+- dlaczego klienci długo czekaja na swoja kolej
+- czemu ich ignoruje?
+- czy ja mam sie zajowac instalacja?
+- czy jak klient jest w bazie tzn ze zaplacil ? 
+- jak rozpoznac programistycznie czy zaplacil czy nie ? 
+- jak korzsytac z jvzoo i paypal na raz
+- dlaczego jest nie konsystentny ? dlaczego paypal API kazal a potem z tego nie korzysta ? 
+
+
+(podłączyć historię bucketów)
+- https://bitbucket.org/api/2.0/repositories/przeznik/aaroftp/commit/4a7eab9 <-- to pokazuje historię dla ostatniego commita
+- trzeba rozpracować jak dostać listę wszystkich commitów.
+
+
+
+
+IDEAS / QUESTIONS:
+1. are you going to add expiration date for every installed product ? (for example 12month license or FOREVER?) if yes I need to addadditional status for every transaction ( waiting, installed, Problems, Cancelled, and EXPIRED ) ?
+
+2. Customer admin password - has to do something with this.
+my idea is to generate password as below:
+NAME  SURNAME     EMAIL_LOGIN       @EMAIL_DOMAIN  DATE_ORDERED
+Keith Naughton    YorkshireMarketing@gmail.com     2015-09-29 09:49:34
+Get first letter from:
+[K] name
+[Y] email_login
+[G] email_domain
+[4934] date_ordered
+KYg4934
+
+3.  REFUND - remove customer domain from "bucketfilelist" (it is already working) and remove all files from his server.
+
+4. I have been thinking about additional installation feature for all products which have the same date ORDERED DATE.
+For example if records have the same EMAIL and ORDERED DATE means it can be install automaticaly by one click.
+
+5.  In theory I can implement "autonomous mode"
+JVZOO tells exactly the moment where customer paid the money. In therory I can install product on customer's server in next 2-3 minutes, send emil with details (how many product was installed itd)
+
+6. email from Aaron 9 July 2015 at 00:43
+Allow disabling of completion email after installation in case of manual install for customer
+Add option 'install without email' to drop-down menu in http://www.setupmyproduct.com/home
+Allow disabling of submission confirmation email after form submission in case of manual install for customer
+Add option 'install without email' to drop-down menu in http://www.setupmyproduct.com/show_available_products
+Example:
+http://www.setupmyproduct.com/?uicode=omb1&email=0
+
+DO WE REALLY NEED THIS? I see you are set email=0 everywhere.
+
+problem with: Gmail - email: supersalesmachine@gmail.com | pw: ssmachinesupport
+
+
+-[not done] If all product was installed successfully for products with the same ordered_date system should ask for permission to send notification email with login and password etc.
+
+-[not done] in case "group product" system should remember was email confirmation sent or not? (additional field in database)
+
+-[ok] Allow me to manually enter new domain name to protection list.
+-[ok] Allow me to manually enter new domain name to protection list.
+-[ok] Allow me to manually remove domain from protection list in case customer refunds.
+-[ok] Recognize case where the same domains is in transaction and protected file
+-[ok] Recognize case where customer register https domains because bucket file is generated only with http
+-[ok] Do tests with /bucketfile where "protected domains file" is empty or has errors.
+-[ok] change order in menu on right side:
+     1) Install without email
+     2) Install with email
+     3) Send Email
+     4) Edit
+     5) Change status
+     6) (rest without change)
+
+- [ok] 100 records on one page 
+- [ok] validation: numbers only for jvzoo id
+- [ok] don't forget to send my clickbank_id
+
+- [x] if I changed something and SAVE let me show this particular record (at this moment it dissapears somewhere)
+- [x] implement: ppapi=1 (four additional fileds)
+- [x] try to show every transaction information in one line 
+- [x] Set primary location of product .txt and .zip files from Amazon S3 server
+http://supersalesmachine.s3.amazonaws.com/admin/files/
+- [x] Set secondary location of product .txt and .zip files from my FTP server
+http://www.supersalesmachine.com/admin/files
+S3 server will be faster and more reliable in case my FTP server is down.
+This may require a new tab called 'Backup URLs' where I can specify 2 or 3 URLs for system to get .txt and .zip files from.
+
+
+- [x] I would like to add another text field to install form called 'Admin password'.
+This would edit the user.php, look for $pass = ''; and add the string.
+This would allow customers to customize the password for their admin.
+We can talk more about this later.
+<b>it is better idea to do this on admin side. Everybody who has access to admin can change default password. No need to add additional field to form</b>
+
+
+- <b>(NOT DONE)</b> change menu in top:
+  from: transaction, products, TODO
+  to: transaction, domains, emails (templates), TODO
+
+- <b>(NOT DONE)</b> format domains:
+"http://www.imtrainingcourses.com/*",
+"http://imtrainingcourses.com/*",
+
+
+
+
+
+- <b>(PARTIALLY DONE - waiting for changing json file)</b> Add quick link "go to product" and "go to admin" on transaction list
+
+- <b>(NOT DONE)</b> Test why "refresh button" adds product sometimes (is it 16 max char issue?)
+
+- <b>(NOT DONE)</b> after testing shoud say: YOUR DETAILS SERVER ARE CORRECT and block edit fields - it is enough to show div that cover everything
+
+- <b>(NOT DONE)</b> jvzo toporny@gmail.com / QweQwe123
+
+- <b>(NOT DONE)</b> email with remonder that somebody already paid but not filled the form IPN_JVZOO 
+email content:
+
+- <b>(NOT DONE)</b> sorting (by Name, Email, Product(s), Ordered, Installed, Transaction ID)
+
+- <b>(NOT DONE)</b> Bucket issues:
+
+- <b>figure out what is the story</b> http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketDELETEpolicy.html
+
+- <b>(NOT DONE)</b> email after buy product (use jvzoo_ipn.php to handle moment where customer buys product)
+  After Buy email:
+  [FIRSTNAME] Please Ensure You've Filled In Your Install Request Form!
+  Thank you [FIRSTNAME] for your recent purchase of [PRODUCTNAME].
+  We'd like to start working on your project right away.
+  To ensure that our staff receive your install request please make sure you've filled in the form below...
+  http://aaronftp.byonecar.com/?uicode=[UICODE]
+  Thanks,
+  Aaron.
+  SuperSalesMachine.com
+
+</pre>
